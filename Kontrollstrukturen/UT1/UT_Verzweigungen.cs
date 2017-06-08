@@ -189,22 +189,22 @@ namespace UT1
             Dokument d = new Dokument();
             d.WertSetzen<bool>("geschützt", true);
             d.WertSetzen<int>("anzahlBytes", 200);
-            Programmieren.PrüfeMethode<string>(d, "schützen", null, "dateiTyp", x => { return x == ".locked"; });
+            Programmieren.PrüfeMethode<string>(d, "entsperren", null, "dateiTyp", x => { return x == ".locked"; });
 
             d = new Dokument();
             d.WertSetzen<bool>("geschützt", true);
             d.WertSetzen<int>("anzahlBytes", 200);
-            Programmieren.PrüfeMethode<int>(d, "schützen", null, "anzahlBytes", x => { return x == 320; });
+            Programmieren.PrüfeMethode<int>(d, "entsperren", null, "anzahlBytes", x => { return x == 320; });
 
             d = new Dokument();
             d.WertSetzen<bool>("geschützt", false);
             d.WertSetzen<int>("anzahlBytes", 200);
-            Programmieren.PrüfeMethode<string>(d, "schützen", null, "dateiTyp", x => { return x == ".unlocked"; });
+            Programmieren.PrüfeMethode<string>(d, "entsperren", null, "dateiTyp", x => { return x == ".unlocked"; });
 
             d = new Dokument();
             d.WertSetzen<bool>("geschützt", false);
             d.WertSetzen<int>("anzahlBytes", 200);
-            Programmieren.PrüfeMethode<int>(d, "schützen", null, "anzahlBytes", x => { return x == 150; });
+            Programmieren.PrüfeMethode<int>(d, "entsperren", null, "anzahlBytes", x => { return x == 150; });
         }
 
         [TestMethod]
